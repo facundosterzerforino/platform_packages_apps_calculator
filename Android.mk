@@ -29,10 +29,9 @@ LOCAL_PACKAGE_NAME := Calculator
 
 include $(BUILD_PACKAGE)
 ##################################################
-include $(CLEAR_VARS)
-
-LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := libarity:arity-2.1.2.jar
-include $(BUILD_MULTI_PREBUILT)
+# xt550-libre: the prebuilt arity-2.1.2.jar was removed. Build the arity
+# engine from source (https://github.com/preda/arithmetic) as libarity, or use
+# build.py, which compiles it together with this app.
 
 # Use the folloing include to make our test apk.
 include $(call all-makefiles-under,$(LOCAL_PATH))
